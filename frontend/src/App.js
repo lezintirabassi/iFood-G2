@@ -46,10 +46,21 @@ function App() {
     };
 
     return (
-        <div className="container">
+
+        
+        <section className="login">
+        <div className="container-bg-login">
+
+        <img src="../bg-1.svg" alt="Descrição da imagem" />
+
+
+        </div>
+        <div className="container-login">
+        <div className="container-formulario-login">
             <h1>Gerenciamento de Clientes</h1>
 
-            <form onSubmit={handleSubmit}>
+            <h3>Preencha os campos para adicionar um novo cliente</h3>
+            <form onSubmit={handleSubmit} className="formulario-login">
                 <input type="text" placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} required />
                 <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 {!modoEdicao && <input type="text" placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)} required />}
@@ -66,7 +77,17 @@ function App() {
                 ))}
             </ul>
         </div>
-    );
+       
+        </div>
+       
+       
+        </section>
+    
+
+
+);
 }
+
+
 
 export default App;
